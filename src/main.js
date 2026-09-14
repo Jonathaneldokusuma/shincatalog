@@ -5,6 +5,17 @@ const telegramLink = `https://t.me/${telegramUsername}`
 
 let currentLang = 'id'
 let currentTheme = 'light'
+let heroImageIndex = 0
+let heroImageTimer
+
+const heroImages = [
+  'https://store-images.s-microsoft.com/image/apps.19518.14597666972638877.042b999e-e945-42e2-b28e-972a86cdeb65.6be8719d-10d4-43e7-b35d-37749ed64ad7',
+  'https://webusstatic.yo-star.com/web-cms-prod/upload/content/2026/06/01/XzCsyNpk.png',
+  'https://images.rpgsite.net/image/da49c9a1/139385/original/Zenless-Zone-Zero_Launch_KeyArt.jpg',
+  'https://images.igdb.com/igdb/image/upload/t_original/ar5bjo.jpg',
+  'https://images.igdb.com/igdb/image/upload/t_720p/cobfz5.jpg',
+  'https://images.unsplash.com/photo-1542751110-97427bbecf20?auto=format&fit=crop&w=1200&q=90',
+]
 
 const copy = {
   id: {
@@ -194,7 +205,27 @@ const render = () => {
     </main>
     <footer class="site-footer section-wrap"><a class="brand" href="#top"><img class="brand-mark" src="/logo.png" alt="" /><span>Shin<span>Catalog</span></span></a><p>${c.footer}</p><span class="footer-note">© 2026 ShinCatalog</span></footer>
   `
+  bindHeroImageCycle()
   bindInteractions()
+}
+
+const setHeroImage = (image) => {
+  const heroImage = document.querySelector('.hero-image')
+  if (!heroImage) return
+
+  heroImage.style.setProperty('--hero-image', `url("${image}")`)
+  heroImage.classList.remove('is-warping')
+  void heroImage.offsetWidth
+  heroImage.classList.add('is-warping')
+}
+
+const bindHeroImageCycle = () => {
+  window.clearInterval(heroImageTimer)
+  setHeroImage(heroImages[heroImageIndex])
+  heroImageTimer = window.setInterval(() => {
+    heroImageIndex = (heroImageIndex + 1) % heroImages.length
+    setHeroImage(heroImages[heroImageIndex])
+  }, 1000)
 }
 
 const buildOrderLink = (card, quantity, note) => {
