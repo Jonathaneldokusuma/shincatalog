@@ -13,8 +13,7 @@ const heroImages = [
   'https://webusstatic.yo-star.com/web-cms-prod/upload/content/2026/06/01/XzCsyNpk.png',
   'https://images.rpgsite.net/image/da49c9a1/139385/original/Zenless-Zone-Zero_Launch_KeyArt.jpg',
   'https://images.igdb.com/igdb/image/upload/t_original/ar5bjo.jpg',
-  'https://images.igdb.com/igdb/image/upload/t_720p/cobfz5.jpg',
-  'https://images.unsplash.com/photo-1542751110-97427bbecf20?auto=format&fit=crop&w=1200&q=90',
+  'https://images.igdb.com/igdb/image/upload/t_original/cobfz5.jpg',
 ]
 
 const copy = {
