@@ -178,7 +178,7 @@ const render = () => {
   document.documentElement.dataset.theme = currentTheme
   document.querySelector('#app').innerHTML = `
     <header class="site-header">
-      <a class="brand" href="#top" aria-label="ShinCatalog home"><span class="brand-mark">S<span>/</span></span><span>Shin<span>Catalog</span></span></a>
+      <a class="brand" href="#top" aria-label="ShinCatalog home"><img class="brand-mark" src="/logo.png" alt="" /><span>Shin<span>Catalog</span></span></a>
       <nav class="nav-links" aria-label="Navigasi utama"><a href="#layanan">${c.nav[0]}</a><a href="#paket">${c.nav[1]}</a><a href="#proses">${c.nav[2]}</a><a href="#faq">${c.nav[3]}</a></nav>
       <div class="header-actions"><button class="toggle-chip flag-toggle" type="button" data-lang-toggle aria-label="${currentLang === 'id' ? 'Switch to English' : 'Ganti ke Bahasa Indonesia'}" title="${currentLang === 'id' ? 'English' : 'Indonesia'}"><img src="https://flagcdn.com/${currentLang === 'id' ? 'us' : 'id'}.svg" alt="" /></button><button class="toggle-chip" type="button" data-theme-toggle aria-label="${currentTheme === 'light' ? 'Aktifkan dark mode' : 'Aktifkan light mode'}" title="${currentTheme === 'light' ? 'Dark mode' : 'Light mode'}">${currentTheme === 'light' ? '☾' : '☼'}</button><a class="header-cta" href="${telegramLink}" target="_blank" rel="noreferrer">${c.chat} <span>↗</span></a></div>
     </header>
@@ -192,7 +192,7 @@ const render = () => {
       <section id="faq" class="section-wrap faq-section"><div class="faq-copy reveal"><p class="eyebrow">05 / FAQ</p><h2>${c.faqTitle}</h2><a class="text-link" href="${telegramLink}" target="_blank" rel="noreferrer">${c.ask} <span>↗</span></a></div><div class="faq-list reveal reveal-delay"><details open><summary>${t('Apakah akun saya aman?', 'Is my account safe?')}</summary><p>${t('Prioritas kami adalah keamanan akun. Kami tidak mengubah data sensitif dan selalu memberi update selama proses berjalan.', 'Account safety is our priority. We do not change sensitive data and keep you updated during the process.')}</p></details><details><summary>${t('Berapa lama prosesnya?', 'How long does it take?')}</summary><p>${t('Durasi tergantung target dan antrean. Estimasi pasti kami berikan sebelum order dikonfirmasi.', 'Timing depends on target and queue. We give an estimate before confirming the order.')}</p></details><details><summary>${t('Bisa request game lain?', 'Can I request another game?')}</summary><p>${t('Bisa. Kirimkan game dan targetmu lewat Telegram, lalu kami cek apakah bisa kami handle.', 'Yes. Send the game and target through Telegram, then we will check if we can handle it.')}</p></details></div></section>
       <section class="cta-section section-wrap reveal"><div><p class="eyebrow eyebrow-dark">READY WHEN YOU ARE</p><h2>${c.ctaTitle}</h2></div><a class="button button-light" href="${telegramLink}" target="_blank" rel="noreferrer"><span class="telegram-symbol">➤</span> ${c.telegram} <span>↗</span></a></section>
     </main>
-    <footer class="site-footer section-wrap"><a class="brand" href="#top"><span class="brand-mark">S<span>/</span></span><span>Shin<span>Catalog</span></span></a><p>${c.footer}</p><span class="footer-note">© 2026 ShinCatalog</span></footer>
+    <footer class="site-footer section-wrap"><a class="brand" href="#top"><img class="brand-mark" src="/logo.png" alt="" /><span>Shin<span>Catalog</span></span></a><p>${c.footer}</p><span class="footer-note">© 2026 ShinCatalog</span></footer>
   `
   bindInteractions()
 }
