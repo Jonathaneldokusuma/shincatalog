@@ -10,7 +10,7 @@ let heroImageTimer
 
 const heroImages = [
   'https://store-images.s-microsoft.com/image/apps.19518.14597666972638877.042b999e-e945-42e2-b28e-972a86cdeb65.6be8719d-10d4-43e7-b35d-37749ed64ad7',
-  'https://images.igdb.com/igdb/image/upload/t_original/ar5jeu.jpg',
+  'https://news.denfaminicogamer.jp/wp-content/uploads/2019/12/25234345/keyb.jpg',
   'https://images.rpgsite.net/image/da49c9a1/139385/original/Zenless-Zone-Zero_Launch_KeyArt.jpg',
   'https://images.igdb.com/igdb/image/upload/t_original/ar5bjo.jpg',
   'https://images.igdb.com/igdb/image/upload/t_original/cobfz5.jpg',
